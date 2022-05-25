@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "00b877b3-ec32-4adb-8275-21d756dac050",
+		"name": "lu-sl-sfdc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/getAllAccounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "1",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "client_secret",
+						"value": "1",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/getAllAccounts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"getAllAccounts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0017Q00000IM6YYQA1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getAllContacts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/getAllContacts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"getAllContacts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0037Q000008laoGQAQ",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/createContact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Street__c\": \"Brivibas Street\",\r\n\"House_Number__c\": \"23\",\r\n\"Postal_Code__c\": \"LV-5323\",\r\n\"City__c\": \"Riga\",\r\n\"Country__c\": \"Latvia\",\r\n\"AccountId\": \"0017Q00000ILum0QAD\",\r\n\"LastName\": \"Rubenis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/createContact",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"createContact"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0017Q00000ILmLJQA1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/createAccount",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Oleg Kalns\",\r\n    \"Industry\": \"Finance\",\r\n    \"Last_Name__c\": \"Rubenis\",\r\n    \"DOB__c\": \"148891\",\r\n    \"Contact_Language__c\": \"Latvian\",\r\n    \"Blocked__c\": false,\r\n    \"Language__c\": \"German\",\r\n    \"Supplier__c\": \"yes\",\r\n    \"Identity_Number__c\": \"12345-45678\",\r\n    \"Gender__c\": \"Oleg\",\r\n    \"First_Name__c\": \"Kalns\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/createAccount",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"createAccount"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0017Q00000ILmLJQA1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateAccount",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Oleg Kalns\",\r\n    \"Industry\": \"Finance\",\r\n    \"Last_Name__c\": \"Rubenis\",\r\n    \"DOB__c\": \"148891\",\r\n    \"Contact_Language__c\": \"Latvian\",\r\n    \"Blocked__c\": false,\r\n    \"Language__c\": \"German\",\r\n    \"Supplier__c\": \"yes\",\r\n    \"Identity_Number__c\": \"12345-45678\",\r\n    \"Gender__c\": \"Male\",\r\n    \"First_Name__c\": \"Kalns\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/updateAccount/0017Q00000ILv0EQAT",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"updateAccount",
+						"0017Q00000ILv0EQAT"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0017Q00000ILmLJQA1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateContact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Street__c\": \"Brivibas Street\",\r\n\"House_Number__c\": \"23\",\r\n\"Postal_Code__c\": \"LV-5323\",\r\n\"Languages__c\": \"Australian\",\r\n\"Time_Zone__c\": \"CET\",\r\n\"City__c\": \"Riga\",\r\n\"Country__c\": \"Latvia\",\r\n\"LastName\": \"Leo Rubenis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/updateContact/0037Q00000AUXx0QAH",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"updateContact",
+						"0037Q00000AUXx0QAH"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0017Q00000ILmLJQA1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deleteAccount",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/deleteAccount/0017Q00000IMVUrQAP",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"deleteAccount",
+						"0017Q00000IMVUrQAP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deleteContact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/deleteContact/0037Q00000ASjMoQAL",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"deleteContact",
+						"0037Q00000ASjMoQAL"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://localhost:8082",
+			"type": "default"
+		},
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"value": "",
+			"type": "default",
+			"disabled": true
+		}
+	]
+}

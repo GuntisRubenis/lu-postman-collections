@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "5b257099-7a00-4910-bc52-b4d81581624e",
+		"name": "lu-el-webapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/getAccountContact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/getAccountContact?account=yes&contact=yes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"getAccountContact"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0037Q00000ASx20QAD",
+							"disabled": true
+						},
+						{
+							"key": "account",
+							"value": "yes"
+						},
+						{
+							"key": "contact",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateAccountContact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"Account\":{\r\n        \"Name\":\"Kek Org\",\r\n        \"Industry\": \"Finance\",\r\n        \"Last_Name__c\": \"Rubenis\",\r\n        \"DOB__c\": \"148891\",\r\n        \"Contact_Language__c\": \"Latvian\",\r\n        \"Blocked__c\": false,\r\n        \"Language__c\": \"German\",\r\n        \"Supplier__c\": \"yes\",\r\n        \"Identity_Number__c\": \"12345-45678\",\r\n        \"Gender__c\": \"Oleg\",\r\n        \"First_Name__c\": \"Kalns\"\r\n    },\r\n    \"Contact\": {\r\n        \"Street__c\": \"Brivibas Street\",\r\n        \"House_Number__c\": \"23\",\r\n        \"Postal_Code__c\": \"LV-5323\",\r\n        \"City__c\": \"Riga\",\r\n        \"Country__c\": \"Latvia\",\r\n        \"LastName\": \"Kek Store\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/updateAccountContact?objectType=all&accountId=0017Q00000IM6PEQA1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"updateAccountContact"
+					],
+					"query": [
+						{
+							"key": "objectType",
+							"value": "all"
+						},
+						{
+							"key": "contactId",
+							"value": "0037Q00000ASsSUQA1",
+							"disabled": true
+						},
+						{
+							"key": "accountId",
+							"value": "0017Q00000IM6PEQA1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deleteAccountContact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"Account\":{\r\n        \"Name\":\"Ali Yo\",\r\n        \"Industry\": \"Finance\",\r\n        \"Last_Name__c\": \"Rubenis\",\r\n        \"DOB__c\": \"148891\",\r\n        \"Contact_Language__c\": \"Latvian\",\r\n        \"Blocked__c\": false,\r\n        \"Language__c\": \"German\",\r\n        \"Supplier__c\": \"yes\",\r\n        \"Identity_Number__c\": \"12345-45678\",\r\n        \"Gender__c\": \"Oleg\",\r\n        \"First_Name__c\": \"Kalns\"\r\n    },\r\n    \"Contact\": {\r\n        \"Street__c\": \"Brivibas Street\",\r\n        \"House_Number__c\": \"23\",\r\n        \"Postal_Code__c\": \"LV-5323\",\r\n        \"City__c\": \"Riga\",\r\n        \"Country__c\": \"Latvia\",\r\n        \"LastName\": \"Alibabas Store\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/deleteAccountContact?objectType=account&accountId=0017Q00000IM5pfQAD",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"deleteAccountContact"
+					],
+					"query": [
+						{
+							"key": "objectType",
+							"value": "account"
+						},
+						{
+							"key": "contactId",
+							"value": "0037Q00000ASsSUQA1",
+							"disabled": true
+						},
+						{
+							"key": "accountId",
+							"value": "0017Q00000IM5pfQAD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/createAccountContact",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"Account\":{\r\n        \"Name\":\"Joe Dumars\",\r\n        \"Industry\": \"Finance\",\r\n        \"Last_Name__c\": \"Dumars\",\r\n        \"DOB__c\": \"148891\",\r\n        \"Contact_Language__c\": \"Latvian\",\r\n        \"Blocked__c\": false,\r\n        \"Language__c\": \"German\",\r\n        \"Supplier__c\": \"yes\",\r\n        \"Identity_Number__c\": \"12345-45678\",\r\n        \"Gender__c\": \"Male\",\r\n        \"First_Name__c\": \"Joe\"\r\n    },\r\n    \"Contact\": {\r\n        \"Street__c\": \"Brivibas Street\",\r\n        \"House_Number__c\": \"23\",\r\n        \"Postal_Code__c\": \"LV-5323\",\r\n        \"City__c\": \"Riga\",\r\n        \"Country__c\": \"Latvia\",\r\n        \"LastName\": \"Dumars\"\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/createAccountContact?objectType=all",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"createAccountContact"
+					],
+					"query": [
+						{
+							"key": "objectType",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://localhost:8082",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

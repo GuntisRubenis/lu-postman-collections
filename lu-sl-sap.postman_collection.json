@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "e10d715f-7328-450e-bcb6-2f70183d541b",
+		"name": "lu-sl-sap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/getAllBusinessPartners",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/getAllBusinessPartners",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"getAllBusinessPartners"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1003769",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getAllBusinessPartnersAddresses",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/getAllBusinessPartnerAddresses",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"getAllBusinessPartnerAddresses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1003764",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/createBusinessPartnerAddress",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"StreetName\": \"Brivibas Street RIGA\",\r\n        \"HouseNumber\": \"3410\",\r\n        \"PostalCode\": \"CA 94304\",\r\n        \"CityName\": \"Palo Alto\",\r\n        \"FullName\": \"Guntis Rubenis\",\r\n        \"Country\": \"US\",\r\n        \"BusinessPartner\": \"1003769\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/createBusinessPartnerAddress",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"createBusinessPartnerAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/createBusinessPartner",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Industry\": \"Ag\",\r\n  \"IsSexUnknown\": false,\r\n  \"LastName\": \"Rubenis\",\r\n  \"BusinessPartnerIsBlocked\": false,\r\n  \"Supplier\": \"yes\",\r\n  \"PersonNumber\": \"1234545678\",\r\n  \"IsFemale\": false,\r\n  \"IsNaturalPerson\": \"X\",\r\n  \"FirstName\": \"Leo\",\r\n  \"IsMale\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/createBusinessPartner",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"createBusinessPartner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateBusinessPartner",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Industry\": \"Other\",\r\n  \"IsSexUnknown\": false,\r\n  \"LastName\": \"Kalnins\",\r\n  \"BusinessPartnerIsBlocked\": false,\r\n  \"Supplier\": \"N0\",\r\n  \"PersonNumber\": \"28240\",\r\n  \"IsFemale\": true,\r\n  \"IsNaturalPerson\": \"X\",\r\n  \"FirstName\": \"Ivo\",\r\n  \"IsMale\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/updateBusinessPartner/1003769",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"updateBusinessPartner",
+						"1003769"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateBusinessPartnerAddress",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"StreetName\": \"Brivibas Street RIGA\",\r\n        \"HouseNumber\": \"3410\",\r\n        \"PostalCode\": \"CA 94304\",\r\n        \"CityName\": \"Palo Alto\",\r\n        \"FullName\": \"Guntis Rubenis\",\r\n        \"Country\": \"US\",\r\n        \"BusinessPartner\": \"1003769\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/updateBusinessPartnerAddress/28249",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"updateBusinessPartnerAddress",
+						"28249"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deleteBusinessPartner",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/deleteBusinessPartner/1003765",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"deleteBusinessPartner",
+						"1003765"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deleteBusinessPartnerAddress",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/deleteBusinessPartnerAddress/1003765?addressId=28241",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"deleteBusinessPartnerAddress",
+						"1003765"
+					],
+					"query": [
+						{
+							"key": "addressId",
+							"value": "28241"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://localhost:8082",
+			"type": "default"
+		},
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default",
+			"disabled": true
+		}
+	]
+}
